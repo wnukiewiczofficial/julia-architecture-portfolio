@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import { Project } from "@/types/project";
 import styles from "./ProjectCard.module.css";
 
@@ -153,10 +154,20 @@ export default function ProjectCard({ project, index }: Props) {
 
 	return (
 		<div ref={ref} className={`${styles.card} ${visible ? styles.visible : ""} ${isReversed ? styles.reversed : ""}`}>
-			<div className={styles.visual} style={{ background: project.bgColor }}>
-				<div className={styles.svgWrap}>
-					<ProjectSvg id={project.id} />
-				</div>
+			<div className={styles.visual} style={{ background: project.preview ? "var(--bg)" : project.bgColor }}>
+				{project.preview ? (
+					<Image
+						src={project.preview}
+						alt={project.title}
+						fill
+						sizes="(max-width: 768px) 100vw, 50vw"
+						className={styles.previewImg}
+					/>
+				) : (
+					<div className={styles.svgWrap}>
+						<ProjectSvg id={project.id} />
+					</div>
+				)}
 			</div>
 			<div className={styles.info}>
 				<h2 className={styles.title}>{renderTitle(project.title, project.titleItalic || "")}</h2>

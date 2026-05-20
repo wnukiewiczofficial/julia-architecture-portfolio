@@ -6,4 +6,5 @@ export interface Project {
 	tags: string[];
 	pdfs: { label: string; url: string }[];
 	bgColor: string;
+	preview?: string;
 }

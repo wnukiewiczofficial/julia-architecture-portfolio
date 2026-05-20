@@ -1,6 +1,7 @@
 .card {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 0.8fr 1.2fr;
+	grid-template-areas: "visual info";
 	opacity: 0;
 	transform: translateY(20px);
 }
@@ -13,15 +14,13 @@
 		transform 0.6s ease;
 }
 
-.card.reversed .visual {
-	order: 2;
-}
-
-.card.reversed .info {
-	order: 1;
+.card.reversed {
+	grid-template-columns: 1.2fr 0.8fr;
+	grid-template-areas: "info visual";
 }
 
 .visual {
+	grid-area: visual;
 	aspect-ratio: 4 / 3;
 	position: relative;
 	overflow: hidden;
@@ -48,6 +47,15 @@
 	opacity: 0.5;
 }
 
+.previewImg {
+	object-fit: contain;
+	transition: transform 0.4s ease;
+}
+
+.card:hover .previewImg {
+	transform: scale(1.03);
+}
+
 .pdfSection {
 	display: flex;
 	flex-direction: column;
@@ -57,6 +65,7 @@
 	padding-top: 1rem;
 	border-top: 1px solid var(--line);
 	width: 100%;
+	max-width: var(--content-width);
 }
 
 .pdfLabel {
@@ -96,12 +105,14 @@
 }
 
 .info {
+	grid-area: info;
 	padding: 3rem;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	gap: 1rem;
+	--content-width: 500px;
 }
 
 .title {
@@ -110,6 +121,8 @@
 	font-weight: 300;
 	line-height: 1.15;
 	color: var(--ink);
+	width: 100%;
+	max-width: var(--content-width);
 }
 
 .titleItalic {
@@ -122,8 +135,8 @@
 	line-height: 1.75;
 	color: var(--ink-light);
 	font-weight: 300;
-	max-width: 500px;
-	margin-inline: auto;
+	width: 100%;
+	max-width: var(--content-width);
 	font-family: inherit;
 }
 
@@ -133,6 +146,8 @@
 	justify-content: center;
 	gap: 0.4rem;
 	margin-top: 0.25rem;
+	width: 100%;
+	max-width: var(--content-width);
 }
 
 .tag {
@@ -146,14 +161,6 @@
 }
 
 @media (min-width: 769px) {
-	.card {
-		grid-template-columns: 0.9fr 1.1fr;
-	}
-
-	.visual {
-		padding: 2.5rem 3rem;
-	}
-
 	.title {
 		font-size: 2.375rem;
 	}
@@ -162,14 +169,15 @@
 @media (max-width: 768px) {
 	.card {
 		grid-template-columns: 1fr;
+		grid-template-areas:
+			"visual"
+			"info";
 	}
 
-	.card.reversed .visual {
-		order: unset;
-	}
-
-	.card.reversed .info {
-		order: unset;
+	.card.reversed {
+		grid-template-areas:
+			"visual"
+			"info";
 	}
 
 	.info {
