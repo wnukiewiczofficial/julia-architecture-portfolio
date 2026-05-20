@@ -128,4 +128,12 @@
 	.card.reversed .info {
 		order: unset;
 	}
+
+	.info {
+		padding: 1.5rem;
+	}
+
+	.title {
+		font-size: 1.5rem;
+	}
 }
