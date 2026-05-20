@@ -4,6 +4,7 @@
 	--ink-light: #6b6760;
 	--accent: #8b7355;
 	--line: #d4d0c8;
+	--header-offset: 5.5rem;
 
 	/* Typography scale */
 	--text-label-sm: 0.75rem;
@@ -39,6 +40,7 @@
 
 html {
 	scroll-behavior: smooth;
+	scroll-padding-top: var(--header-offset);
 }
 
 body {
