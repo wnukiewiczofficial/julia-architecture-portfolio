@@ -5,8 +5,7 @@ import styles from "./Nav.module.css";
 
 const links = [
 	{ href: "#projekty", label: "Projekty" },
-	{ href: "#o-mnie", label: "O mnie" },
-	{ href: "#kontakt", label: "Kontakt" },
+	{ href: "#o-mnie-i-kontakt", label: "O mnie i Kontakt" },
 ] as const;
 
 export default function Nav() {
