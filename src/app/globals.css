@@ -53,3 +53,7 @@ body {
 		transform: translateY(0);
 	}
 }
+
+main {
+	text-align: center;
+}

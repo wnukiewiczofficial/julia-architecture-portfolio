@@ -42,6 +42,7 @@
 	color: var(--ink-light);
 	line-height: 1.7;
 	max-width: 520px;
+	margin-inline: auto;
 	padding-top: 1.5rem;
 }
 
