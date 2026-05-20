@@ -1,0 +1,36 @@
+.section {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 5rem;
+  padding: 6rem 3rem;
+  border-top: 1px solid var(--line);
+}
+
+.label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--ink-light);
+}
+
+.email {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom-color 0.2s ease;
+}
+
+.email:hover {
+  border-bottom-color: var(--accent);
+}
+
+@media (max-width: 768px) {
+  .section {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 4rem 1.5rem;
+  }
+}
