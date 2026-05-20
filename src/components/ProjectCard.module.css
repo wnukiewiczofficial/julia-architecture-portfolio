@@ -175,6 +175,7 @@
 	}
 
 	.card.reversed {
+		grid-template-columns: 1fr;
 		grid-template-areas:
 			"visual"
 			"info";
