@@ -1,28 +1,28 @@
 .footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-top: 1px solid var(--line);
-  padding: 2rem 3rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-top: 1px solid var(--line);
+	padding: 2rem 3rem;
 }
 
 .name {
-  font-family: var(--font-caveat);
-  font-size: 1.1rem;
-  color: var(--ink);
+	font-family: var(--font-caveat);
+	font-size: var(--text-logo);
+	color: var(--ink);
 }
 
 .year {
-  font-family: var(--font-mono);
-  font-size: 0.6rem;
-  text-transform: uppercase;
-  color: var(--ink-light);
+	font-family: var(--font-mono);
+	font-size: var(--text-label-sm);
+	text-transform: uppercase;
+	color: var(--ink-light);
 }
 
 @media (max-width: 768px) {
-  .footer {
-    flex-direction: column;
-    gap: 0.5rem;
-    padding: 1.5rem;
-  }
+	.footer {
+		flex-direction: column;
+		gap: 0.5rem;
+		padding: 1.5rem;
+	}
 }
