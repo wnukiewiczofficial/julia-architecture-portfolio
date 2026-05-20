@@ -157,11 +157,6 @@ export default function ProjectCard({ project, index }: Props) {
 				<div className={styles.svgWrap}>
 					<ProjectSvg id={project.id} />
 				</div>
-				{project.pdf && (
-					<a href={project.pdf} download className={styles.pdfButton}>
-						Pobierz PDF ↓
-					</a>
-				)}
 			</div>
 			<div className={styles.info}>
 				<h2 className={styles.title}>{renderTitle(project.title, project.titleItalic || "")}</h2>
@@ -173,6 +168,18 @@ export default function ProjectCard({ project, index }: Props) {
 						</span>
 					))}
 				</div>
+				{project.pdfs.length > 0 && (
+					<div className={styles.pdfSection}>
+						<span className={styles.pdfLabel}>Do pobrania</span>
+						<div className={styles.pdfButtons}>
+							{project.pdfs.map((pdf) => (
+								<a key={pdf.url} href={pdf.url} download className={styles.pdfButton}>
+									{pdf.label} ↓
+								</a>
+							))}
+						</div>
+					</div>
+				)}
 			</div>
 		</div>
 	);

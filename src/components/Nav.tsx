@@ -64,11 +64,21 @@ export default function Nav() {
 				aria-label="Menu mobilne"
 				aria-hidden={!menuOpen}
 			>
-				{links.map(({ href, label }) => (
-					<a key={href} href={href} className={styles.mobileLink} onClick={closeMenu} tabIndex={menuOpen ? 0 : -1}>
-						{label}
+				<div className={styles.mobileNavBar}>
+					<a href="#" className={styles.logo} onClick={closeMenu} tabIndex={menuOpen ? 0 : -1}>
+						Julia Walczak
 					</a>
-				))}
+					<button type="button" className={styles.closeButton} aria-label="Zamknij menu" onClick={closeMenu} tabIndex={menuOpen ? 0 : -1}>
+						<span className={styles.closeIcon} aria-hidden="true" />
+					</button>
+				</div>
+				<div className={styles.mobileNavLinks}>
+					{links.map(({ href, label }) => (
+						<a key={href} href={href} className={styles.mobileLink} onClick={closeMenu} tabIndex={menuOpen ? 0 : -1}>
+							{label}
+						</a>
+					))}
+				</div>
 			</nav>
 		</header>
 	);

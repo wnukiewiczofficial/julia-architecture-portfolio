@@ -1,7 +1,6 @@
 .card {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	border-top: 1px solid var(--line);
 	opacity: 0;
 	transform: translateY(20px);
 }
@@ -49,24 +48,51 @@
 	opacity: 0.5;
 }
 
-.pdfButton {
-	position: absolute;
-	bottom: 1rem;
-	right: 1rem;
+.pdfSection {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.5rem;
+	margin-top: 0.25rem;
+	padding-top: 1rem;
+	border-top: 1px solid var(--line);
+	width: 100%;
+}
+
+.pdfLabel {
 	font-family: var(--font-mono);
 	font-size: var(--text-label-sm);
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
-	color: white;
-	border: 1px solid rgba(255, 255, 255, 0.3);
+	color: var(--ink-light);
+	opacity: 0.5;
+}
+
+.pdfButtons {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 0.5rem;
+}
+
+.pdfButton {
+	font-family: var(--font-mono);
+	font-size: var(--text-label-sm);
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	color: var(--ink-light);
+	border: 1px solid var(--line);
 	padding: 0.4rem 0.8rem;
 	text-decoration: none;
 	background: transparent;
-	transition: background 0.2s ease;
+	transition:
+		background 0.2s ease,
+		color 0.2s ease;
 }
 
 .pdfButton:hover {
-	background: rgba(255, 255, 255, 0.1);
+	background: var(--ink);
+	color: var(--bg);
 }
 
 .info {

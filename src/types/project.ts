@@ -4,6 +4,6 @@ export interface Project {
 	titleItalic?: string;
 	description: string;
 	tags: string[];
-	pdf: string | null;
+	pdfs: { label: string; url: string }[];
 	bgColor: string;
 }

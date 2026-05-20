@@ -12,10 +12,6 @@
 	border-bottom: 1px solid var(--line);
 }
 
-.headerMenuOpen {
-	z-index: 103;
-}
-
 .logo {
 	font-family: var(--font-caveat);
 	font-size: var(--text-logo);
@@ -122,11 +118,9 @@
 	top: 0;
 	left: 0;
 	right: 0;
-	z-index: 101;
+	z-index: 102;
 	flex-direction: column;
-	align-items: flex-start;
-	gap: 2rem;
-	padding: 6.5rem 1.5rem 2rem;
+	align-items: stretch;
 	background: var(--bg);
 	border-bottom: 1px solid var(--line);
 	opacity: 0;
@@ -137,7 +131,66 @@
 		transform 0.3s ease;
 }
 
+.mobileNavBar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1.2rem 1.5rem;
+	border-bottom: 1px solid var(--line);
+}
+
+.closeButton {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 2.5rem;
+	height: 2.5rem;
+	padding: 0;
+	border: none;
+	background: transparent;
+	cursor: pointer;
+}
+
+.closeIcon,
+.closeIcon::before,
+.closeIcon::after {
+	display: block;
+	width: 1.25rem;
+	height: 1px;
+}
+
+.closeIcon {
+	position: relative;
+	background: transparent;
+}
+
+.closeIcon::before,
+.closeIcon::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	background: var(--ink);
+}
+
+.closeIcon::before {
+	transform: rotate(45deg);
+}
+
+.closeIcon::after {
+	transform: rotate(-45deg);
+}
+
+.mobileNavLinks {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 2rem;
+	padding: 2rem 1.5rem;
+}
+
 .mobileNavOpen {
+	z-index: 103;
 	opacity: 1;
 	transform: translateY(0);
 	pointer-events: auto;
@@ -168,6 +221,12 @@
 
 	.menuButton {
 		display: flex;
+	}
+
+	.headerMenuOpen > .logo,
+	.headerMenuOpen > .menuButton {
+		visibility: hidden;
+		pointer-events: none;
 	}
 
 	.overlay {
