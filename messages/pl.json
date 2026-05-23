@@ -36,7 +36,7 @@
 	"projects": {
 		"park-komunikacyjny": {
 			"title": "Układ komunikacyjny parku",
-			"description": "Drogi piesze i rowerowe, parking oraz pochylnie dla osób z niepełnosprawnościami. Projekt lawki parkowej z miejscami dla osob z niepelnosprawnosciami.",
+			"description": "Drogi piesze i rowerowe, parking oraz pochylnie dla osób z niepełnosprawnościami. Projekt ławki parkowej z miejscami dla osób z niepełnosprawnościami.",
 			"tags": ["Infrastruktura", "Układ urbanistyczny", "Mała architektura"],
 			"pdfs": [{ "label": "Pobierz PDF" }]
 		},
