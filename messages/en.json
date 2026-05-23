@@ -36,7 +36,7 @@
 	"projects": {
 		"park-komunikacyjny": {
 			"title": "Park circulation layout",
-			"description": "Pedestrian and cycling paths, parking, and ramps for people with disabilities. Design of a park bench in architectural concrete.",
+			"description": "Pedestrian and cycling paths, parking, and ramps for people with disabilities. A park bench design with spaces for people with disabilities.",
 			"tags": ["Infrastructure", "Urban layout", "Small architecture"],
 			"pdfs": [{ "label": "Download PDF" }]
 		},
