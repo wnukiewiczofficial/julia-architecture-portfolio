@@ -1,0 +1,56 @@
+{
+	"Metadata": {
+		"title": "Julia Walczak — Architecture Portfolio",
+		"description": "Architecture portfolio. Design of public spaces, private gardens, and small architectural objects."
+	},
+	"Nav": {
+		"projects": "Projects",
+		"aboutContact": "About & Contact",
+		"mainNav": "Main navigation",
+		"mobileNav": "Mobile menu",
+		"openMenu": "Open menu",
+		"closeMenu": "Close menu",
+		"languageLabel": "Language",
+		"switchToEn": "EN",
+		"switchToPl": "PL"
+	},
+	"Hero": {
+		"eyebrow": "Julia Walczak",
+		"heading": "Architecture Portfolio",
+		"subtitle": "Landscape architecture",
+		"description": "Work spanning the design of public spaces, private gardens, and small architectural objects."
+	},
+	"Projects": {
+		"label": "Projects"
+	},
+	"AboutContact": {
+		"aboutLabel": "About",
+		"aboutText": "I am a landscape architecture student at the Poznań University of Life Sciences. My work spans multiple scales, from public spaces and utility buildings to private gardens.",
+		"contactLabel": "Contact"
+	},
+	"ProjectCard": {
+		"download": "Downloads",
+		"home": "HOME",
+		"herbs": "HERBS"
+	},
+	"projects": {
+		"park-komunikacyjny": {
+			"title": "Park circulation layout",
+			"description": "Pedestrian and cycling paths, parking, and ramps for people with disabilities. Design of a park bench in architectural concrete.",
+			"tags": ["Infrastructure", "Urban layout", "Small architecture"],
+			"pdfs": [{ "label": "Download PDF" }]
+		},
+		"sauna-lesna": {
+			"title": "Forest sauna",
+			"description": "A hemispherical structure integrated into a forest setting. The design is complemented by plantings and a water basin.A physical scale model was produced as part of the project.",
+			"tags": ["Built structure", "Natural materials"],
+			"pdfs": [{ "label": "Download PDF" }]
+		},
+		"ogrod-przydomowy": {
+			"title": "Residential garden",
+			"description": "Conceptual and executive design. Terrace, wooden patio, herb zone, fountain. 36 plant species.",
+			"tags": ["Landscape design", "Paving", "Small architecture"],
+			"pdfs": [{ "label": "Graphic part" }, { "label": "Descriptive part" }]
+		}
+	}
+}

@@ -1,19 +1,6 @@
-import Nav from "@/components/Nav";
-import Hero from "@/components/Hero";
-import Projects from "@/components/Projects";
-import AboutContact from "@/components/AboutContact";
-import Footer from "@/components/Footer";
+import { redirect } from "next/navigation";
 
-export default function Home() {
-	return (
-		<>
-			<Nav />
-			<main>
-				<Hero />
-				<Projects />
-				<AboutContact />
-			</main>
-			<Footer />
-		</>
-	);
+// Static export has no middleware; default locale lives at /pl (copied to index.html after build).
+export default function RootPage() {
+	redirect("/pl");
 }

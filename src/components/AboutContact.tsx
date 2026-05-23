@@ -1,18 +1,18 @@
+import { useTranslations } from "next-intl";
 import styles from "./AboutContact.module.css";
 
 export default function AboutContact() {
+	const t = useTranslations("AboutContact");
+
 	return (
 		<section id="o-mnie-i-kontakt" className={styles.section}>
 			<div className={styles.grid}>
 				<div className={styles.column}>
-					<div className={styles.label}>O mnie</div>
-					<div className={styles.content}>
-						Jestem studentką architektury krajobrazu na Uniwersytecie Przyrodniczym w Poznaniu. W swojej pracy zajmuję się projektowaniem na
-						różnych skalach, od przestrzeni publicznych i obiektów użytkowych po ogrody prywatne.
-					</div>
+					<div className={styles.label}>{t("aboutLabel")}</div>
+					<div className={styles.content}>{t("aboutText")}</div>
 				</div>
 				<div className={styles.column}>
-					<div className={styles.label}>Kontakt</div>
+					<div className={styles.label}>{t("contactLabel")}</div>
 					<a href="mailto:juliawalczak788@gmail.com" className={styles.email}>
 						juliawalczak788@gmail.com
 					</a>

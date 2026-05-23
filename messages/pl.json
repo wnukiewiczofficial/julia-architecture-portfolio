@@ -1,0 +1,56 @@
+{
+	"Metadata": {
+		"title": "Julia Walczak — Portfolio architektoniczne",
+		"description": "Portfolio architektoniczne. Projektowanie przestrzeni publicznych, ogrodów prywatnych i obiektów małej architektury."
+	},
+	"Nav": {
+		"projects": "Projekty",
+		"aboutContact": "O mnie i Kontakt",
+		"mainNav": "Główna nawigacja",
+		"mobileNav": "Menu mobilne",
+		"openMenu": "Otwórz menu",
+		"closeMenu": "Zamknij menu",
+		"languageLabel": "Język",
+		"switchToEn": "EN",
+		"switchToPl": "PL"
+	},
+	"Hero": {
+		"eyebrow": "Julia Walczak",
+		"heading": "Portfolio Architektoniczne",
+		"subtitle": "Architektura krajobrazu",
+		"description": "Prace z zakresu projektowania przestrzeni publicznych, ogrodów prywatnych i obiektów małej architektury."
+	},
+	"Projects": {
+		"label": "Projekty"
+	},
+	"AboutContact": {
+		"aboutLabel": "O mnie",
+		"aboutText": "Jestem studentką architektury krajobrazu na Uniwersytecie Przyrodniczym w Poznaniu. W swojej pracy zajmuję się projektowaniem na różnych skalach, od przestrzeni publicznych i obiektów użytkowych po ogrody prywatne.",
+		"contactLabel": "Kontakt"
+	},
+	"ProjectCard": {
+		"download": "Do pobrania",
+		"home": "DOM",
+		"herbs": "ZIOŁA"
+	},
+	"projects": {
+		"park-komunikacyjny": {
+			"title": "Układ komunikacyjny parku",
+			"description": "Drogi piesze i rowerowe, parking oraz pochylnie dla osób z niepełnosprawnościami. Projekt ławki parkowej z betonu architektonicznego.",
+			"tags": ["Infrastruktura", "Układ urbanistyczny", "Mała architektura"],
+			"pdfs": [{ "label": "Pobierz PDF" }]
+		},
+		"sauna-lesna": {
+			"title": "Sauna leśna",
+			"description": "Obiekt w formie półkuli wkomponowany w leśne otoczenie. Projekt uzupełniony o nasadzenia i zbiornik wodny. Do projektu wykonano makietę fizyczną.",
+			"tags": ["Obiekt kubaturowy", "Naturalne materiały"],
+			"pdfs": [{ "label": "Pobierz PDF" }]
+		},
+		"ogrod-przydomowy": {
+			"title": "Ogród przydomowy",
+			"description": "Projekt koncepcyjny i wykonawczy. Taras, patio drewniane, strefa ziołowa, fontanna. 36 gatunków roślin.",
+			"tags": ["Projekt zieleni", "Nawierzchnie", "Mała architektura"],
+			"pdfs": [{ "label": "Część graficzna" }, { "label": "Część opisowa" }]
+		}
+	}
+}

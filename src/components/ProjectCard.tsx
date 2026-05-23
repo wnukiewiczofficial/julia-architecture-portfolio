@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import { Project } from "@/types/project";
 import styles from "./ProjectCard.module.css";
 
@@ -75,7 +76,7 @@ function SaunaSvg() {
 	);
 }
 
-function GardenSvg() {
+function GardenSvg({ homeLabel, herbsLabel }: { homeLabel: string; herbsLabel: string }) {
 	return (
 		<svg viewBox="0 0 300 225" xmlns="http://www.w3.org/2000/svg">
 			{/* plot boundary */}
@@ -83,7 +84,7 @@ function GardenSvg() {
 			{/* house */}
 			<rect x="90" y="30" width="80" height="55" stroke="white" strokeWidth="1" fill="none" />
 			<text x="115" y="62" fill="white" fontSize="7" fontFamily="monospace">
-				DOM
+				{homeLabel}
 			</text>
 			{/* terrace arc */}
 			<path d="M90 85 Q130 130 170 85" stroke="white" strokeWidth="1" fill="none" />
@@ -98,7 +99,7 @@ function GardenSvg() {
 			{/* herb zone */}
 			<rect x="35" y="130" width="55" height="40" stroke="white" strokeWidth="1" fill="none" strokeDasharray="4 2" />
 			<text x="42" y="155" fill="white" fontSize="6" fontFamily="monospace">
-				ZIOŁA
+				{herbsLabel}
 			</text>
 			{/* fountain */}
 			<circle cx="145" cy="170" r="14" stroke="white" strokeWidth="1" fill="none" />
@@ -113,14 +114,14 @@ function GardenSvg() {
 	);
 }
 
-function ProjectSvg({ id }: { id: string }) {
+function ProjectSvg({ id, homeLabel, herbsLabel }: { id: string; homeLabel: string; herbsLabel: string }) {
 	switch (id) {
 		case "park-komunikacyjny":
 			return <ParkSvg />;
 		case "sauna-lesna":
 			return <SaunaSvg />;
 		case "ogrod-przydomowy":
-			return <GardenSvg />;
+			return <GardenSvg homeLabel={homeLabel} herbsLabel={herbsLabel} />;
 		default:
 			return null;
 	}
@@ -132,6 +133,7 @@ interface Props {
 }
 
 export default function ProjectCard({ project, index }: Props) {
+	const t = useTranslations("ProjectCard");
 	const ref = useRef<HTMLDivElement>(null);
 	const [visible, setVisible] = useState(false);
 	const isReversed = index % 2 === 1;
@@ -156,16 +158,10 @@ export default function ProjectCard({ project, index }: Props) {
 		<div ref={ref} className={`${styles.card} ${visible ? styles.visible : ""} ${isReversed ? styles.reversed : ""}`}>
 			<div className={styles.visual} style={{ background: project.preview ? "var(--bg)" : project.bgColor }}>
 				{project.preview ? (
-					<Image
-						src={project.preview}
-						alt={project.title}
-						fill
-						sizes="(max-width: 768px) 100vw, 50vw"
-						className={styles.previewImg}
-					/>
+					<Image src={project.preview} alt={project.title} fill sizes="(max-width: 768px) 100vw, 50vw" className={styles.previewImg} />
 				) : (
 					<div className={styles.svgWrap}>
-						<ProjectSvg id={project.id} />
+						<ProjectSvg id={project.id} homeLabel={t("home")} herbsLabel={t("herbs")} />
 					</div>
 				)}
 			</div>
@@ -181,7 +177,7 @@ export default function ProjectCard({ project, index }: Props) {
 				</div>
 				{project.pdfs.length > 0 && (
 					<div className={styles.pdfSection}>
-						<span className={styles.pdfLabel}>Do pobrania</span>
+						<span className={styles.pdfLabel}>{t("download")}</span>
 						<div className={styles.pdfButtons}>
 							{project.pdfs.map((pdf) => (
 								<a key={pdf.url} href={pdf.url} download className={styles.pdfButton}>
